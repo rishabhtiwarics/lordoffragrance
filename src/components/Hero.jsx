@@ -4,12 +4,10 @@ import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import './Hero.css'
-import heroBanner1 from '../assets/bnner/herobanner1.jpeg'
 import heroBanner2 from '../assets/bnner/herobanner2.jpeg'
 import heroBanner3 from '../assets/bnner/herobanner3.jpeg'
 
 const IMAGES = [
-  heroBanner1,
   heroBanner2,
   heroBanner3
 ]
@@ -30,9 +28,9 @@ export default function Hero() {
       >
         {IMAGES.map((img, index) => (
           <SwiperSlide key={index}>
-            <div 
-              className="hero-slide-bg" 
-              style={{ backgroundImage: `url(${img})` }} 
+            <div
+              className="hero-slide-bg"
+              style={{ backgroundImage: `url(${img})` }}
             />
           </SwiperSlide>
         ))}

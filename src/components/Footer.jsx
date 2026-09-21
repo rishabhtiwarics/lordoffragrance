@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import logoImg from '../assets/logo.png'
 import './Footer.css'
 
@@ -47,7 +47,7 @@ export default function Footer() {
               placeholder=""
             />
             <button className="footer-email-arrow" aria-label="Submit email">
-              →
+              â†’
             </button>
           </div>
         </div>
@@ -89,9 +89,16 @@ export default function Footer() {
         <a href="#">FACEBOOK</a>
         <a href="#">X</a>
       </div>
-
       <div className="footer-bottom">
-        <p>© 2026, All Rights Reserved. LORD OF FRAGRANCE — A unit of Devillia</p>
+        <p>
+          &copy; 2026, All Rights Reserved. LORD OF FRAGRANCE &mdash; A unit of Devillia{' '}
+          <span className="footer-credit">
+            Created By{' '}
+            <a href="https://www.launchveda.com/" target="_blank" rel="noreferrer">
+              Launchveda
+            </a>
+          </span>
+        </p>
       </div>
     </footer>
   )

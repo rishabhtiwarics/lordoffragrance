@@ -6,6 +6,7 @@ import FeaturedDuo from './components/FeaturedDuo.jsx'
 import ImpressionParallax from './components/ImpressionParallax.jsx'
 import ShopCollection from './components/ShopCollection.jsx'
 import FooterMarquee from './components/FooterMarquee.jsx'
+import PromoBanner from './components/PromoBanner.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <BenefitsBar />
       <FeaturedDuo />
       <ImpressionParallax />
+      <PromoBanner />
       <ShopCollection />
       <FooterMarquee />
       <Footer />

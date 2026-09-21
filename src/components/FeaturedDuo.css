@@ -30,9 +30,7 @@
   object-fit: cover;
 }
 
-.featured-duo-wide-img {
-  filter: grayscale(1) contrast(1.05);
-}
+
 
 .featured-duo-card::after,
 .featured-duo-wide::after {

@@ -1,29 +1,29 @@
 import './FeaturedDuo.css'
+import featuredimg1 from '../assets/FeaturedDuoimg/featuredimg1.jpeg'
+import featuredimg2 from '../assets/FeaturedDuoimg/featuredimg2.jpeg'
+import featuredimg3 from '../assets/FeaturedDuoimg/featuredimg3.jpeg'
+import featuredimg4 from '../assets/FeaturedDuoimg/featuredimg4.jpeg'
 
 const featuredItems = [
   {
     title: 'THRONE',
     subtitle: 'ABSOLUTE. DARK. UNRIVALLED.',
-    image:
-      'https://images.unsplash.com/photo-1484406566174-9da000fda645?q=80&w=2200&auto=format&fit=crop',
+    image: featuredimg1,
   },
   {
     title: 'TUESDAY LONDON NOIR 9 EAU DE PARFUM 100ML',
     subtitle: 'SMOKY. BOLD. MYSTERIOUS.',
-    image:
-      'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1400&auto=format&fit=crop',
+    image: featuredimg2,
   },
   {
     title: 'TUESDAY LONDON MAYFAIR 21 EAU DE PARFUM 100ML',
     subtitle: 'RICH. WARM. MAGNETIC.',
-    image:
-      'https://images.unsplash.com/photo-1595425970377-c9703bc48baf?q=80&w=1400&auto=format&fit=crop',
+    image: featuredimg3,
   },
   {
     title: 'LEGACY',
     subtitle: 'TIMELESS. POWERFUL. DISTINCTIVE.',
-    image:
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=2200&auto=format&fit=crop',
+    image: featuredimg4,
   },
 ]
 

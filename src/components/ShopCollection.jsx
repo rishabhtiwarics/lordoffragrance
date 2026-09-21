@@ -3,6 +3,11 @@ import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import './ShopCollection.css'
+import productimg1 from '../assets/productimg/1.png'
+import productimg2 from '../assets/productimg/2.png'
+import productimg3 from '../assets/productimg/3.png'
+import productimg4 from '../assets/productimg/4.png'
+import productimg5 from '../assets/productimg/5.jpeg'
 
 const products = [
   {
@@ -10,60 +15,56 @@ const products = [
     name: 'THE LEGACY SET (4 × 20ML)',
     price: '₹1,899',
     mrp: '₹1,999',
-    image:
-      'https://images.unsplash.com/photo-1758225502621-9102d2856dc8?q=80&w=900&auto=format&fit=crop',
+    image: productimg1,
   },
   {
     id: 2,
     name: 'ORION (100ML)',
     price: '₹1,299',
     mrp: '₹1,499',
-    image:
-      'https://images.unsplash.com/photo-1760920250029-36af9369a0bb?q=80&w=900&auto=format&fit=crop',
+    image: productimg2,
   },
   {
     id: 3,
     name: 'NOBLE (100ML)',
     price: '₹1,299',
     mrp: '₹1,499',
-    image:
-      'https://images.unsplash.com/photo-1584841247175-4d766cefa018?q=80&w=900&auto=format&fit=crop',
+    image: productimg3,
   },
   {
     id: 4,
     name: 'THRONE (100ML)',
     price: '₹1,999',
     mrp: '₹2,499',
-    image:
-      'https://images.unsplash.com/photo-1638609927127-aeb9e74c3cfd?q=80&w=900&auto=format&fit=crop',
+    image: productimg4,
   },
   {
     id: 5,
     name: 'MYSTIQUE (50ML)',
     price: '₹1,099',
     mrp: '₹1,299',
-    image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=900&auto=format&fit=crop',
+    image: productimg5,
   },
   {
     id: 6,
     name: 'AURORA (100ML)',
     price: '₹1,499',
     mrp: '₹1,799',
-    image: 'https://images.unsplash.com/photo-1595425970377-c9703bc48baf?q=80&w=900&auto=format&fit=crop',
+    image: productimg1,
   },
   {
     id: 7,
     name: 'ECLIPSE (50ML)',
     price: '₹999',
     mrp: '₹1,199',
-    image: 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=900&auto=format&fit=crop',
+    image: productimg2,
   },
   {
     id: 8,
     name: 'VANGUARD (100ML)',
     price: '₹1,699',
     mrp: '₹2,199',
-    image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=900&auto=format&fit=crop',
+    image: productimg3,
   },
 ]
 

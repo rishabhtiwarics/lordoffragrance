@@ -118,6 +118,16 @@
   letter-spacing: 0.3px;
 }
 
+.footer-credit {
+  margin-left: 12px;
+}
+
+.footer-credit a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
