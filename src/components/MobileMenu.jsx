@@ -5,7 +5,7 @@ const links = [
   'SHOP ALL',
   'FRAGRANCES',
   'BUILD YOUR OWN BUNDLE',
-  'KNOW SARKAR',
+  'KNOW LORD OF FRAGRANCE',
 ]
 
 export default function MobileMenu({ open, onClose }) {
