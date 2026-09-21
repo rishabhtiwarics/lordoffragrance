@@ -1,5 +1,5 @@
 import './ImpressionParallax.css'
-import impressionImage from '../assets/bnner/herobanner3.jpeg'
+import impressionImage from '../assets/parallaximg.jpeg'
 
 export default function ImpressionParallax() {
   return (
