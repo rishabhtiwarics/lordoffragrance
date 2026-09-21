@@ -1,0 +1,102 @@
+.mobile-menu-overlay {
+  position: fixed;
+  top: var(--menu-top, var(--header-h));
+  left: 0;
+  bottom: 0;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.12);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu-overlay.open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 24px;
+  overflow-y: auto;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.mobile-menu-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chevron {
+  font-size: 14px;
+}
+
+.mobile-menu-footer {
+  margin-top: 40px;
+}
+
+.account-btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.account-btn {
+  flex: 1;
+  background: #f2f2f2;
+  color: #111;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 14px 8px;
+}
+
+.follow-us-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  color: #111;
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  top: var(--menu-top, var(--header-h));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  z-index: 44;
+}
+
+@media (max-width: 420px) {
+  .mobile-menu-overlay {
+    max-width: 88%;
+  }
+}

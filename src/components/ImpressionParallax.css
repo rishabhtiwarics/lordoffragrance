@@ -1,0 +1,93 @@
+.impression-parallax {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  isolation: isolate;
+}
+
+.impression-parallax::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.18) 48%, rgba(0, 0, 0, 0.68) 100%);
+  pointer-events: none;
+}
+
+.impression-parallax-content {
+  position: absolute;
+  left: clamp(18px, 4vw, 64px);
+  bottom: clamp(30px, 5vw, 72px);
+  width: min(90%, 560px);
+  color: #ffffff;
+}
+
+.impression-parallax-content h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(28px, 4.8vw, 76px);
+  line-height: 0.96;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.impression-parallax-content p {
+  margin: 0 0 26px;
+  color: #ffffff;
+  font-size: clamp(15px, 1.45vw, 22px);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.impression-parallax-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  padding: 14px 28px;
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.impression-parallax-link:hover {
+  color: #111111;
+  background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.64) 100%);
+  border-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .impression-parallax {
+    min-height: 560px;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 520px) {
+  .impression-parallax {
+    min-height: 460px;
+  }
+
+  .impression-parallax-content p {
+    margin-bottom: 20px;
+  }
+
+  .impression-parallax-link {
+    min-height: 38px;
+    font-size: 10px;
+    padding: 12px 20px;
+  }
+}
