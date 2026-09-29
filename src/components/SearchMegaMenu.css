@@ -1,0 +1,57 @@
+.search-mega-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+}
+
+.search-mega-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  padding: 16px 5%;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  animation: slideUp 0.3s ease-out forwards;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.search-mega-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 12px;
+}
+
+.search-mega-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.search-mega-input::placeholder {
+  color: #aaa;
+}
+
+.search-mega-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+

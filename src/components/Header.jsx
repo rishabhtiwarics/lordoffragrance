@@ -1,10 +1,15 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileMenu from './MobileMenu.jsx'
+import CartSidebar from './CartSidebar.jsx'
+import SearchMegaMenu from './SearchMegaMenu.jsx'
 import logoImg from '../assets/headerlogo.png'
 import './Header.css'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [cartOpen, setCartOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const headerRef = useRef(null)
 
   useEffect(() => {
@@ -46,12 +51,20 @@ export default function Header() {
         </button>
 
         <div className="logo">
-          <img src={logoImg} alt="Lord of Fragrance" className="logo-img" />
+          <Link to="/">
+            <img src={logoImg} alt="Lord of Fragrance" className="logo-img" />
+          </Link>
         </div>
 
         <div className="header-right">
+          <button className="icon-btn search-btn" aria-label="Search" onClick={() => setSearchOpen(true)}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M21 21L16.65 16.65" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
           <button className="buy-now-btn">Buy Now</button>
-          <button className="icon-btn cart-btn" aria-label="Open cart">
+          <button className="icon-btn cart-btn" aria-label="Open cart" onClick={() => setCartOpen(true)}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"
@@ -68,6 +81,8 @@ export default function Header() {
       </header>
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <CartSidebar open={cartOpen} onClose={() => setCartOpen(false)} />
+      <SearchMegaMenu open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   )
 }

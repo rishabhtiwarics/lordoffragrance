@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import logoImg from '../assets/logo.png'
 import './Footer.css'
 
@@ -16,8 +16,6 @@ const columns = [
     links: [
       'Privacy Policy',
       'Terms & Conditions',
-      'Orders & Shipping',
-      'Cancellation Policy',
       'Refund Policy',
     ],
   },
@@ -47,7 +45,7 @@ export default function Footer() {
               placeholder=""
             />
             <button className="footer-email-arrow" aria-label="Submit email">
-              â†’
+              &#8594;
             </button>
           </div>
         </div>
@@ -67,18 +65,24 @@ export default function Footer() {
 
         <div className="footer-column footer-contact">
           <p className="footer-column-title">CONTACT US</p>
-          <a href="mailto:support@lordoffragrance.com" className="footer-contact-line">
+          <div className="footer-contact-line" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="white"/>
+            </svg>
+            <span>Address goes here</span>
+          </div>
+          <a href="tel:+1234567890" className="footer-contact-line" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="white"/>
+            </svg>
+            +1 234 567 890
+          </a>
+          <a href="mailto:lordoffragrance@gmail.com" className="footer-contact-line" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <svg width="16" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 5h18v14H3V5Z" stroke="white" strokeWidth="1.5" />
               <path d="M3 6l9 7 9-7" stroke="white" strokeWidth="1.5" />
             </svg>
-            SUPPORT@LORDOFFRAGRANCE.COM
-          </a>
-          <a href="#" className="footer-contact-line">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.5 2 2 6.4 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3A9.9 9.9 0 0 0 12 22c5.5 0 10-4.4 10-10S17.5 2 12 2Z" />
-            </svg>
-            <span className="underline">REACH US HERE</span>
+            LORDOFFRAGRANCE@GMAIL.COM
           </a>
         </div>
       </div>
@@ -87,7 +91,6 @@ export default function Footer() {
         <a href="#">INSTAGRAM</a>
         <a href="#">YOUTUBE</a>
         <a href="#">FACEBOOK</a>
-        <a href="#">X</a>
       </div>
       <div className="footer-bottom">
         <p>

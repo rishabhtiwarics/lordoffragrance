@@ -26,6 +26,7 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .logo-img {
@@ -39,6 +40,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .buy-now-btn {
@@ -60,6 +63,12 @@
 @media (max-width: 640px) {
   .site-header {
     padding: 0 16px;
+  }
+  .header-right {
+    gap: 12px;
+  }
+  .search-btn {
+    display: none;
   }
   .logo-img {
     height: 44px;
