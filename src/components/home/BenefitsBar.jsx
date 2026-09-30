@@ -1,4 +1,4 @@
-import './BenefitsBar.css'
+
 
 const Icon = ({ type }) => {
   if (type === 'tag') {

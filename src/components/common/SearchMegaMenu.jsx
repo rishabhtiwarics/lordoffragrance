@@ -1,4 +1,4 @@
-import './SearchMegaMenu.css'
+
 
 export default function SearchMegaMenu({ open, onClose }) {
   if (!open) return null;

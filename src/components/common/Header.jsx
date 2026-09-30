@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import MobileMenu from './MobileMenu.jsx'
 import CartSidebar from './CartSidebar.jsx'
 import SearchMegaMenu from './SearchMegaMenu.jsx'
-import logoImg from '../assets/headerlogo.png'
-import './Header.css'
+import logoImg from '../../assets/headerlogo.png'
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)

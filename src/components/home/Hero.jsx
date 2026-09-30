@@ -3,9 +3,9 @@ import { Autoplay, EffectFade } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
-import './Hero.css'
-import heroBanner2 from '../assets/bnner/herobanner2.jpeg'
-import heroBanner3 from '../assets/bnner/herobanner3.jpeg'
+
+import heroBanner2 from '../../assets/bnner/herobanner2.jpeg'
+import heroBanner3 from '../../assets/bnner/herobanner3.jpeg'
 
 const IMAGES = [
   heroBanner2,

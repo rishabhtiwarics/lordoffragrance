@@ -1,5 +1,5 @@
-import './CartSidebar.css'
-import CartItemCard from './common/CartItemCard.jsx'
+
+import CartItemCard from '../cart/CartItemCard.jsx'
 import { Link } from 'react-router-dom'
 
 export default function CartSidebar({ open, onClose }) {

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
-import AnnouncementBar from '../components/AnnouncementBar.jsx'
-import Header from '../components/Header.jsx'
-import FooterMarquee from '../components/FooterMarquee.jsx'
-import Footer from '../components/Footer.jsx'
+import AnnouncementBar from '../components/common/AnnouncementBar.jsx'
+import Header from '../components/common/Header.jsx'
+import FooterMarquee from '../components/common/FooterMarquee.jsx'
+import Footer from '../components/common/Footer.jsx'
 
 export default function MainLayout() {
   return (

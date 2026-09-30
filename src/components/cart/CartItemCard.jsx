@@ -1,4 +1,4 @@
-import './CartItemCard.css'
+
 
 export default function CartItemCard({ variant = 'page' }) {
   const isMini = variant === 'mini'

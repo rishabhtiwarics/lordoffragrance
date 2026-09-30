@@ -1,4 +1,4 @@
-import './FooterMarquee.css'
+
 
 const marqueeItems = Array.from({ length: 12 }, (_, index) => index)
 

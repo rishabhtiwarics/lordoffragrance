@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import logoImg from '../assets/logo.png'
-import './Footer.css'
+import logoImg from '../../assets/logo.png'
+
 
 const columns = [
   {

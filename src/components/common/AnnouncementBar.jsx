@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './AnnouncementBar.css'
+
 
 function getTimeLeft(endTime) {
   const diff = Math.max(0, endTime - Date.now())
