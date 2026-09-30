@@ -45,6 +45,12 @@ export const products = [
     longDescription: 'Throne is our most powerful fragrance, offering absolute dark and unrivalled notes of woody depth and leathery intensity for the bold at heart.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Get extra 5% off on prepaid orders',
+    notes: [
+      { name: 'Leather', image: 'https://picsum.photos/seed/leather/200/200' },
+      { name: 'Wood', image: 'https://picsum.photos/seed/wood/200/200' },
+      { name: 'Smoke', image: 'https://picsum.photos/seed/smoke/200/200' },
+      { name: 'Vanilla', image: 'https://picsum.photos/seed/vanilla/200/200' }
+    ],
     offers: [
       { badge: 'GIFT • INCLUDED', title: 'A MINI SURPRISE FOR YOU', desc: 'Get a 7ml Parfum with your order', actionText: 'APPLIED AT CHECKOUT', image: productimg5 },
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'Buy 2 or more 100ml Fragrances, save up to 15%', actionText: 'EXPLORE BUNDLES', image: comboimg1 }
@@ -69,6 +75,10 @@ export const products = [
     longDescription: 'Noir 9 represents the apex of nocturnal fragrance, merging smoky woods with subtle amber for a truly mysterious trail.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Get an extra 10% off with NOIR10',
+    notes: [
+      { name: 'Smoke', image: 'https://picsum.photos/seed/smoke/200/200' },
+      { name: 'Amber', image: 'https://picsum.photos/seed/amber/200/200' }
+    ],
     offers: [
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'Buy 2 or more 100ml Fragrances, save up to 15%', actionText: 'EXPLORE BUNDLES', image: comboimg2 }
     ]
@@ -92,6 +102,11 @@ export const products = [
     longDescription: 'Mayfair 21 captures the warmth of an English evening, featuring magnetic notes of spices, amber, and light woods.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Free shipping on orders above ₹1,000',
+    notes: [
+      { name: 'Spices', image: 'https://picsum.photos/seed/spices/200/200' },
+      { name: 'Amber', image: 'https://picsum.photos/seed/amber/200/200' },
+      { name: 'Wood', image: 'https://picsum.photos/seed/wood/200/200' }
+    ],
     offers: [
       { badge: 'GIFT • INCLUDED', title: 'FREE SAMPLE', desc: 'Get a 2ml tester with your order', actionText: 'APPLIED AT CHECKOUT', image: productimg5 },
       { badge: 'DISCOUNT', title: 'FLAT 10%', desc: 'Use code FLAT10 on checkout', actionText: 'APPLY CODE', image: productimg3 },
@@ -118,6 +133,11 @@ export const products = [
     longDescription: 'The Legacy Set is the ultimate introduction to Lord of Fragrance, featuring 4x20ml bottles of our absolute best sellers in one distinctive box.',
     note: '* Exclusive collection. Dispatches in 2 days.',
     promoBanner: 'Get extra 5% off on prepaid orders',
+    notes: [
+      { name: 'Leather', image: 'https://picsum.photos/seed/leather/200/200' },
+      { name: 'Vanilla', image: 'https://picsum.photos/seed/vanilla/200/200' },
+      { name: 'Amber', image: 'https://picsum.photos/seed/amber/200/200' }
+    ],
     offers: []
   },
   {
@@ -138,6 +158,10 @@ export const products = [
     longDescription: 'Noble is a versatile and refined fragrance that brings together fresh citrus with light woody undertones, perfect for making a subtle yet memorable impression.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Buy any 2, get 10% off',
+    notes: [
+      { name: 'Citrus', image: 'https://picsum.photos/seed/citrus/200/200' },
+      { name: 'Wood', image: 'https://picsum.photos/seed/wood/200/200' }
+    ],
     offers: [
       { badge: 'DISCOUNT', title: 'FLAT 10%', desc: 'Use code FLAT10 on checkout', actionText: 'APPLY CODE', image: productimg3 }
     ]
@@ -160,6 +184,11 @@ export const products = [
     longDescription: 'Orion captures the essence of the ocean breeze. With aquatic heart notes and a crisp, vibrant opening, it is your ultimate companion for the summer.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Free shipping on orders above ₹1,000',
+    notes: [
+      { name: 'Citrus', image: 'https://picsum.photos/seed/citrus/200/200' },
+      { name: 'Amber', image: 'https://picsum.photos/seed/amber/200/200' },
+      { name: 'Wood', image: 'https://picsum.photos/seed/wood/200/200' }
+    ],
     offers: [
       { badge: 'GIFT • INCLUDED', title: 'FREE SAMPLE', desc: 'Get a 2ml tester with your order', actionText: 'APPLIED AT CHECKOUT', image: productimg5 },
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'Buy 2 or more 100ml Fragrances, save up to 15%', actionText: 'EXPLORE BUNDLES', image: comboimg1 }
@@ -183,6 +212,10 @@ export const products = [
     longDescription: 'Mystique is an enchanting floral fragrance that blends sweet jasmine with soft vanilla, creating an irresistible aura for your most special evenings.',
     note: '* Exclusive 50ml edition. Dispatches in 2 days.',
     promoBanner: 'Get extra 5% off on prepaid orders',
+    notes: [
+      { name: 'Floral', image: 'https://picsum.photos/seed/floral/200/200' },
+      { name: 'Vanilla', image: 'https://picsum.photos/seed/vanilla/200/200' }
+    ],
     offers: []
   },
   {
@@ -203,6 +236,9 @@ export const products = [
     longDescription: 'Aurora embodies the first light of day. Its bright and uplifting citrus harmony invigorates the senses, leaving a trail of pure radiant energy.',
     note: '* Currently out of stock. Check back next week.',
     promoBanner: 'Sign up to get notified when back in stock',
+    notes: [
+      { name: 'Citrus', image: 'https://picsum.photos/seed/citrus/200/200' }
+    ],
     offers: [
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'Buy 2 or more 100ml Fragrances, save up to 15%', actionText: 'EXPLORE BUNDLES', image: comboimg1 }
     ]
@@ -227,6 +263,12 @@ export const products = [
     longDescription: 'Meet the complete Lord of Fragrance collection. Why choose one when you can experience all three?',
     note: '* Premium packaging included.',
     promoBanner: 'Enjoy free premium shipping',
+    notes: [
+      { name: 'Wood', image: 'https://images.unsplash.com/photo-1550604183-b7784ecaf8b3?auto=format&fit=crop&q=80&w=200' },
+      { name: 'Floral', image: 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&q=80&w=200' },
+      { name: 'Spices', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=200' },
+      { name: 'Leather', image: 'https://images.unsplash.com/photo-1590740995079-0dbf88836ec8?auto=format&fit=crop&q=80&w=200' }
+    ],
     offers: [
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'You save ₹1,500 by buying the trio', actionText: 'EXPLORE BUNDLES', image: comboimg1 }
     ]
@@ -251,6 +293,11 @@ export const products = [
     longDescription: 'Experience the perfect harmony of our best-selling fragrances. This exclusive duo set is designed for those who appreciate the finer things in life.',
     note: '* Ships within 24-36 hours of ordering.',
     promoBanner: 'Get extra 5% off on prepaid orders',
+    notes: [
+      { name: 'Vanilla', image: 'https://images.unsplash.com/photo-1615486171448-4fd18c641b07?auto=format&fit=crop&q=80&w=200' },
+      { name: 'Caramel', image: 'https://picsum.photos/seed/caramel/200/200' },
+      { name: 'Floral', image: 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&q=80&w=200' }
+    ],
     offers: [
       { badge: 'GIFT • INCLUDED', title: 'A MINI SURPRISE FOR YOU', desc: 'Get a 7ml Parfum with your order', actionText: 'APPLIED AT CHECKOUT', image: productimg5 },
       { badge: 'BUNDLE • SAVE', title: 'MORE FOR YOU', desc: 'Buy 2 or more sets, save up to 10%', actionText: 'EXPLORE BUNDLES', image: comboimg2 }

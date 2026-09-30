@@ -124,6 +124,22 @@ export default function ProductDetails() {
             ))}
           </div>
 
+          {product.notes && product.notes.length > 0 && (
+            <div className="pd-notes-section">
+              <h3 className="pd-notes-title">NOTES</h3>
+              <div className="pd-notes-grid">
+                {product.notes.map((note, idx) => (
+                  <div key={idx} className="pd-note-item">
+                    <div className="pd-note-img">
+                      <img src={note.image} alt={note.name} />
+                    </div>
+                    <span className="pd-note-name">{note.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {product.offers && product.offers.length > 0 && (
             <>
               <h3 className="pd-offers-title">OFFERS</h3>
