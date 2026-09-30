@@ -64,18 +64,25 @@ export default function Header() {
             </svg>
           </button>
           <button className="buy-now-btn">Buy Now</button>
-          <button className="icon-btn cart-btn" aria-label="Open cart" onClick={() => setCartOpen(true)}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"
-                stroke="white"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="9.5" cy="19.5" r="1.3" fill="white" />
-              <circle cx="17" cy="19.5" r="1.3" fill="white" />
-            </svg>
+          <button className="icon-btn cart-btn" aria-label={cartOpen ? 'Close cart' : 'Open cart'} onClick={() => setCartOpen((v) => !v)}>
+            {cartOpen ? (
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1" y1="1" x2="17" y2="17" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                <line x1="17" y1="1" x2="1" y2="17" stroke="white" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2"
+                  stroke="white"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <circle cx="9.5" cy="19.5" r="1.3" fill="white" />
+                <circle cx="17" cy="19.5" r="1.3" fill="white" />
+              </svg>
+            )}
           </button>
         </div>
       </header>

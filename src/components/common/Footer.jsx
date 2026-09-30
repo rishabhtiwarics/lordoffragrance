@@ -1,22 +1,32 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logoImg from '../../assets/logo.png'
 
 
 const columns = [
   {
     title: 'FRAGRANCES',
-    links: ['Throne', 'Noble', 'Regal', 'Orion', 'Build Your Own Bundle', 'Legacy Gift Set'],
+    links: [
+      { label: 'Throne', path: '/product/1' },
+      { label: 'Noble', path: '/product/4' },
+      { label: 'Regal', path: '/product/2' },
+      { label: 'Orion', path: '/product/5' },
+      { label: 'Build Your Own Bundle', path: '/shop' },
+      { label: 'Legacy Gift Set', path: '/product/3' },
+    ],
   },
   {
     title: 'COMPANY',
-    links: ['Know Us'],
+    links: [
+      { label: 'Know Us', path: '/about' },
+    ],
   },
   {
     title: 'POLICY',
     links: [
-      'Privacy Policy',
-      'Terms & Conditions',
-      'Refund Policy',
+      { label: 'Privacy Policy', path: '/privacy-policy' },
+      { label: 'Terms & Conditions', path: '/terms' },
+      { label: 'Refund Policy', path: '/refund-policy' },
     ],
   },
 ]
@@ -55,8 +65,8 @@ export default function Footer() {
             <p className="footer-column-title">{col.title}</p>
             <ul>
               {col.links.map((link) => (
-                <li key={link}>
-                  <a href="#">{link}</a>
+                <li key={link.label}>
+                  <Link to={link.path}>{link.label}</Link>
                 </li>
               ))}
             </ul>

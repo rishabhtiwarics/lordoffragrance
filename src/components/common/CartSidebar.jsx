@@ -9,7 +9,6 @@ export default function CartSidebar({ open, onClose }) {
       <div className={`cart-sidebar ${open ? 'open' : ''}`}>
         <div className="cart-sidebar-header">
           <h2>YOUR CART (2)</h2>
-          <button onClick={onClose} aria-label="Close" className="cart-close-btn">✕</button>
         </div>
         <div className="cart-sidebar-body">
           <CartItemCard variant="mini" />
