@@ -48,6 +48,27 @@ export default function ProductCard({ variant = 'shop', product = {} }) {
     )
   }
 
+  // ── Combo Offer card
+  if (variant === 'combo') {
+    return (
+      <article className="combo-card">
+        <div className="combo-img-wrap">
+          <img src={product.comboImage || image} alt={name} className="combo-img" />
+        </div>
+        <div className="combo-content">
+          <p className="combo-subtitle">{subtitle}</p>
+          <h2 className="combo-title">{name}</h2>
+          <p className="combo-price">{price}</p>
+          <p className="combo-desc">{product.description}</p>
+          <div className="combo-actions">
+            <button className="combo-btn combo-btn-primary">ADD TO CART</button>
+            <button className="combo-btn combo-btn-secondary">BUY NOW</button>
+          </div>
+        </div>
+      </article>
+    )
+  }
+
   // ── Default variants: shop, home, search
   const isSearch = variant === 'search'
 

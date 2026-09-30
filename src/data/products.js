@@ -20,6 +20,9 @@ import productimg3 from '../assets/productimg/3.png'
 import productimg4 from '../assets/productimg/4.png'
 import productimg5 from '../assets/productimg/5.jpeg'
 
+import comboimg1 from '../assets/combooffer/combo1.jpeg'
+import comboimg2 from '../assets/combooffer/combo2.jpeg'
+
 // ── All products ──────────────────────────────────────────────────────────────
 export const products = [
   {
@@ -92,6 +95,28 @@ export const products = [
     mrp: '₹1,799',
     image: productimg1,
   },
+  {
+    id: 9,
+    name: 'LORD OF FRAGRANCE COMPLETE FRAGRANCE COLLECTION - TRIO',
+    title: 'COMPLETE COLLECTION',
+    subtitle: 'THE MASTERPIECE',
+    description: 'Meet the complete Lord of Fragrance collection. Why choose one when you can experience all three? The Lord of Fragrance Complete Fragrance Collection brings together Mayfair 21, Noir 9 and Royal 17 in one premium trio. From the bold red identity...',
+    price: '₹6,999.00',
+    mrp: '₹8,499.00',
+    image: productimg1,
+    comboImage: comboimg1,
+  },
+  {
+    id: 10,
+    name: 'THE ULTIMATE DUO SET',
+    title: 'ULTIMATE DUO',
+    subtitle: 'PERFECT PAIRING',
+    description: 'Experience the perfect harmony of our best-selling fragrances. This exclusive duo set is designed for those who appreciate the finer things in life.',
+    price: '₹2,999.00',
+    mrp: '₹3,499.00',
+    image: productimg2,
+    comboImage: comboimg2,
+  }
 ]
 
 // ── Derived slices ────────────────────────────────────────────────────────────
@@ -100,4 +125,8 @@ export const products = [
 export const featuredProducts = products.filter((p) => p.featuredImage)
 
 /** All products for ShopCollection slider */
-export const shopProducts = products
+export const shopProducts = products.filter((p) => !p.comboImage)
+
+/** Products that appear in the ComboOffer section */
+export const comboProducts = products.filter((p) => p.comboImage)
+

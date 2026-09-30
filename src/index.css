@@ -1704,3 +1704,142 @@ a {
 .contact-info p {
   margin: 8px 0;
 }
+
+/* ============================================================
+   COMBO OFFER SECTION
+   ============================================================ */
+
+.combo-offer-section {
+  background-color: #0b0b0b;
+  color: #fff;
+}
+
+.combo-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.combo-img-wrap {
+  width: 100%;
+}
+
+.combo-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.combo-content {
+  width: 100%;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combo-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.combo-title {
+  font-size: clamp(24px, 4vw, 42px);
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.combo-price {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.combo-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.combo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.combo-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.combo-btn-primary {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.combo-btn-primary:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.combo-btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.combo-btn-secondary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (min-width: 900px) {
+  .combo-card {
+    flex-direction: row;
+  }
+  
+  .combo-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .combo-img-wrap {
+    width: 50%;
+    flex-shrink: 0;
+  }
+  
+  .combo-content {
+    width: 50%;
+    padding: 32px 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .combo-actions {
+    flex-direction: row;
+    max-width: 400px;
+  }
+  
+  .combo-desc {
+    font-size: 16px;
+    max-width: 400px;
+  }
+}
