@@ -805,6 +805,7 @@ a {
   width: 100%;
   min-height: 800px;
   overflow: hidden;
+  background-image: var(--bg-desktop);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -865,6 +866,7 @@ a {
 
 @media (max-width: 900px) {
   .impression-parallax {
+    background-image: var(--bg-mobile);
     min-height: 640px;
   }
 }
@@ -2165,4 +2167,577 @@ a {
     line-height: 1.6;
     -webkit-line-clamp: unset;
   }
+}
+
+/* Skeleton Overlay System */
+@keyframes skeleton-pulse-dark {
+  0% { background-color: #2a2a2a; }
+  50% { background-color: #4a4a4a; }
+  100% { background-color: #2a2a2a; }
+}
+
+@keyframes skeleton-pulse-light {
+  0% { background-color: #e0e0e0; }
+  50% { background-color: #f5f5f5; }
+  100% { background-color: #e0e0e0; }
+}
+
+.skeleton-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  animation: skeleton-pulse-dark 1.5s ease-in-out infinite;
+}
+
+.shop-page-wrapper .skeleton-overlay {
+  animation: skeleton-pulse-light 1.5s ease-in-out infinite;
+}
+
+/* Ensure wrappers properly contain the absolute overlay */
+.product-image-wrap,
+.combo-img-wrap,
+.product-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Text Skeletons */
+.skeleton-text {
+  border-radius: 4px;
+  animation: skeleton-pulse-dark 1.5s ease-in-out infinite;
+  margin-bottom: 8px;
+}
+
+.shop-page-wrapper .skeleton-text {
+  animation: skeleton-pulse-light 1.5s ease-in-out infinite;
+}
+
+/* Specific Sizes */
+.skeleton-title { width: 80%; height: 28px; margin-bottom: 12px; }
+.skeleton-subtitle { width: 60%; height: 16px; margin-bottom: 24px; }
+.skeleton-btn { width: 140px; height: 40px; border-radius: 0; }
+
+/* Responsive Skeleton Alignment */
+.featured-duo-wide-content .skeleton-text,
+.combo-content > .skeleton-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-duo-content .skeleton-text {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .featured-duo-content .skeleton-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.skeleton-name-sm { width: 70%; height: 18px; margin: 16px auto 8px; }
+.skeleton-price-sm { width: 40%; height: 16px; margin: 0 auto 16px; }
+.skeleton-btn-full { width: 120px; height: 36px; margin: 0 auto; border-radius: 0; }
+
+.skeleton-title-combo { width: 90%; height: 32px; margin-bottom: 12px; }
+.skeleton-price { width: 30%; height: 20px; margin-bottom: 16px; }
+.skeleton-desc { width: 100%; height: 48px; margin-bottom: 24px; }
+.skeleton-btn-combo { width: 100%; height: 44px; border-radius: 0; }
+
+.skeleton-title-sm { width: 80%; height: 20px; margin-bottom: 8px; }
+.skeleton-subtitle-sm { width: 60%; height: 14px; margin-bottom: 16px; }
+.skeleton-btn-outline { width: 120px; height: 36px; border-radius: 0; }
+
+/* ============================================================
+   PRODUCT DETAILS PAGE
+   ============================================================ */
+
+.pd-breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.pd-breadcrumb a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.pd-breadcrumb a:hover {
+  color: #000;
+}
+.pd-breadcrumb .active {
+  color: #000;
+  font-weight: 600;
+}
+
+.pd-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 5%;
+}
+
+@media (min-width: 900px) {
+  .pd-main {
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 24px 5%;
+  }
+}
+
+/* Left Images Grid */
+.pd-images-grid {
+  flex: 1.1 1 0%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pd-img-hero {
+  grid-column: 1 / -1;
+  aspect-ratio: 1 / 1;
+}
+
+.pd-img-sub {
+  aspect-ratio: 1 / 1;
+}
+
+.pd-images-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Info Section */
+.pd-info-section {
+  flex: 1 1 0%;
+  min-width: 0;
+  position: sticky;
+  top: 100px;
+}
+
+.pd-tag-loved {
+  color: #111;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.pd-title {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.pd-tags-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.pd-tags-row span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border: 1px solid #e5e7eb;
+  color: #333;
+}
+
+.pd-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.stars svg {
+  width: 16px;
+  height: 16px;
+}
+
+.stock-status {
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.stock-status .dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+}
+
+.pd-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.price-current {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.price-old {
+  font-size: 20px;
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.pd-shipping-note {
+  font-style: italic;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.pd-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 32px;
+}
+
+.pd-badges-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pd-badges-row .badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  color: #4b5563;
+}
+
+.pd-offers-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.pd-offers-slider-wrap {
+  position: relative;
+}
+
+.pd-offers-swiper {
+  padding: 0 !important; 
+}
+
+/* Override Swiper defaults for the offers section */
+.pd-offers-swiper .swiper-button-prev,
+.pd-offers-swiper .swiper-button-next {
+  color: #111;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.pd-offers-swiper .swiper-button-prev::after,
+.pd-offers-swiper .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+.pd-offers-swiper .swiper-button-prev {
+  left: 10px;
+}
+.pd-offers-swiper .swiper-button-next {
+  right: 10px;
+}
+
+@media (min-width: 1200px) {
+  /* No need for grid CSS since we use Swiper now, but keeping for reference if needed elsewhere */
+}
+
+.pd-offer-card {
+  display: flex;
+  background: #f3f4f6;
+  position: relative;
+  height: 120px;
+}
+
+.pd-offer-badge {
+  background: #000;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 6px;
+}
+
+.pd-offer-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pd-offer-content h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.pd-offer-content p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.pd-applied-text {
+  font-size: 10px !important;
+  font-weight: 700;
+  color: #1f2937 !important;
+  margin-top: 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.pd-applied-text svg {
+  width: 12px;
+  height: 12px;
+}
+
+.pd-offer-content a {
+  font-size: 10px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 12px;
+  text-decoration: underline;
+}
+
+.pd-offer-img {
+  width: 80px;
+}
+.pd-offer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pd-qty-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  width: 100px;
+  justify-content: space-between;
+}
+.pd-qty-selector button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  width: 32px;
+  height: 48px;
+  cursor: pointer;
+  color: #374151;
+}
+.pd-qty-selector span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.pd-btn {
+  flex: 1;
+  min-width: 140px; /* Ensure buttons don't shrink too small */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pd-btn-add {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.pd-btn-add:hover {
+  background: #333;
+}
+.pd-btn-add svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.pd-btn-buy {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.pd-btn-buy:hover {
+  background: #f9fafb;
+}
+
+.pd-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: #fafafa;
+  padding: 24px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 32px;
+}
+
+.pd-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.pd-trust-item svg {
+  width: 20px;
+  height: 20px;
+  color: #111;
+}
+
+.pd-promo-banner {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  color: #111;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px;
+}
+
+/* ============================================================
+   PRODUCT DETAILS FAQ & SIGNATURE BANNER
+   ============================================================ */
+
+.pd-faq-section {
+  background-color: #f9f9f9;
+  padding: 40px 5%;
+  margin-top: 40px;
+}
+
+.pd-faq-title {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 40px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pd-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #111;
+}
+
+.pd-faq-item {
+  border-bottom: 1px solid #111;
+}
+
+.pd-faq-header {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: #111;
+  transition: opacity 0.3s;
+}
+
+.pd-faq-header:hover {
+  opacity: 0.7;
+}
+
+.pd-faq-icon {
+  font-size: 20px;
+  font-weight: 400;
+  color: #111;
+}
+
+.pd-faq-body {
+  padding-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.pd-signature-banner {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 5%;
+}
+
+.pd-signature-banner h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 40px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.pd-signature-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pd-signature-buttons .pd-btn {
+  min-width: 250px;
+  text-align: center;
+  justify-content: center;
 }

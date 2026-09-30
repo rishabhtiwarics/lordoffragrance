@@ -1,11 +1,15 @@
 
-import impressionImage from '../../assets/parallaximg.jpeg'
+import impressionImageDesktop from '../../assets/parallaximg.jpeg'
+import impressionImageMobile from '../../assets/mobileparallaximg.jpeg'
 
 export default function ImpressionParallax() {
   return (
     <section
       className="impression-parallax"
-      style={{ backgroundImage: `url(${impressionImage})` }}
+      style={{ 
+        '--bg-desktop': `url(${impressionImageDesktop})`,
+        '--bg-mobile': `url(${impressionImageMobile})`
+      }}
     >
       <div className="impression-parallax-content">
         <h2>LEAVE AN IMPRESSION.</h2>
