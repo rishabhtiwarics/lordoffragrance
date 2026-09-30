@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import ProductCard from '../components/shop/ProductCard.jsx'
 import { shopProducts } from '../data/products.js'
 
-import heroBanner2 from '../assets/bnner/herobanner2.jpeg'
+import shpDetailsBanner from '../assets/shpdetailsbnner.jpg'
 
 export default function Shop() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -148,7 +148,7 @@ export default function Shop() {
         </div>
       </div>
 
-      <img src={heroBanner2} alt="Promo Banner" className="shop-full-width-banner" />
+      <img src={shpDetailsBanner} alt="Promo Banner" className="shop-full-width-banner" />
     </div>
   )
 }

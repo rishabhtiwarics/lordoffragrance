@@ -2795,3 +2795,18 @@ a {
   font-weight: 500;
   color: #111;
 }
+
+/* ============================================================
+   SKELETON LOADER
+   ============================================================ */
+
+@keyframes pulse-skeleton {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pd-skeleton {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  animation: pulse-skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

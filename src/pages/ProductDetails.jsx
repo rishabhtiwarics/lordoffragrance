@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const { id } = useParams()
   const [qty, setQty] = useState(1)
   const [openFaq, setOpenFaq] = useState(null)
+  const [loading, setLoading] = useState(false) // Set to false to show actual content
 
   // Find product by id, default to first product
   const product = products.find(p => p.id === Number(id)) || products[0] || {}
@@ -56,6 +57,58 @@ export default function ProductDetails() {
 
   // Show up to 4 images in the sub-images gallery (including the first one)
   const subImages = (product.images || []).slice(0, 4)
+
+  if (loading) {
+    return (
+      <div className="shop-page-wrapper">
+        <div className="shop-top-header" style={{ paddingBottom: '30px' }}>
+          <div className="pd-skeleton" style={{ width: '200px', height: '20px', margin: '0 auto 16px' }}></div>
+          <div className="pd-skeleton" style={{ width: '40%', height: '40px', margin: '0 auto' }}></div>
+        </div>
+
+        <div className="pd-main">
+          {/* LEFT COLUMN SKELETON */}
+          <div className="pd-images-grid">
+            <div className="pd-skeleton pd-img-hero" style={{ aspectRatio: '4/5', backgroundColor: '#e5e7eb', width: '100%' }}></div>
+            {[1, 2, 3, 4].map(i => (
+              <div key={i} className="pd-skeleton pd-img-sub" style={{ backgroundColor: '#e5e7eb', width: '100%', aspectRatio: '1' }}></div>
+            ))}
+          </div>
+
+          {/* RIGHT COLUMN SKELETON */}
+          <div className="pd-info-section">
+            <div className="pd-skeleton" style={{ width: '80px', height: '20px', marginBottom: '16px' }}></div>
+            <div className="pd-skeleton" style={{ width: '70%', height: '40px', marginBottom: '24px' }}></div>
+            
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
+              <div className="pd-skeleton" style={{ width: '60px', height: '24px', borderRadius: '24px' }}></div>
+              <div className="pd-skeleton" style={{ width: '80px', height: '24px', borderRadius: '24px' }}></div>
+              <div className="pd-skeleton" style={{ width: '70px', height: '24px', borderRadius: '24px' }}></div>
+            </div>
+
+            <div className="pd-skeleton" style={{ width: '140px', height: '24px', marginBottom: '32px' }}></div>
+            
+            <div className="pd-skeleton" style={{ width: '100px', height: '28px', marginBottom: '24px' }}></div>
+            
+            <div className="pd-skeleton" style={{ width: '100%', height: '16px', marginBottom: '12px' }}></div>
+            <div className="pd-skeleton" style={{ width: '90%', height: '16px', marginBottom: '24px' }}></div>
+            
+            <div className="pd-skeleton" style={{ width: '100%', height: '16px', marginBottom: '12px' }}></div>
+            <div className="pd-skeleton" style={{ width: '100%', height: '16px', marginBottom: '12px' }}></div>
+            <div className="pd-skeleton" style={{ width: '85%', height: '16px', marginBottom: '40px' }}></div>
+
+            <div className="pd-actions-row">
+              <div className="pd-skeleton" style={{ width: '100px', height: '48px' }}></div>
+              <div className="pd-skeleton" style={{ flex: 1, minWidth: '140px', height: '48px' }}></div>
+              <div className="pd-skeleton" style={{ flex: 1, minWidth: '140px', height: '48px' }}></div>
+            </div>
+            
+            <div className="pd-skeleton" style={{ width: '100%', height: '120px', marginTop: '24px', borderRadius: '8px' }}></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="shop-page-wrapper">

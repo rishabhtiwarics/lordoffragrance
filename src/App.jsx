@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/common/ScrollToTop.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import AuthLayout from './layouts/AuthLayout.jsx'
 import Home from './pages/Home.jsx'
@@ -14,7 +15,9 @@ import ForgotPassword from './pages/ForgotPassword.jsx'
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
@@ -30,5 +33,6 @@ export default function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Route>
     </Routes>
+    </>
   )
 }
