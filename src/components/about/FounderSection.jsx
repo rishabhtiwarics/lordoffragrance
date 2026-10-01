@@ -30,7 +30,10 @@ export default function FounderSection() {
 
         <figure className="book">
           <figcaption>Our Vision</figcaption>
-          <img src={bookImg} alt="Lord of Fragrance Vision" />
+          <div className="book-img-wrapper">
+            <img src={bookImg} alt="Lord of Fragrance Vision" />
+            <span className="book-signature">Neha Tiwari</span>
+          </div>
         </figure>
       </section>
 
