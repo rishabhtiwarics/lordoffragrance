@@ -21,6 +21,7 @@ export default function FounderSection() {
         </div>
 
         <div className="pen">
+          <span className="eyebrow">Our Philosophy</span>
           <p className="founder-desc">
             Welcome to Lord of Fragrance, where passion meets elegance. Every scent is meticulously crafted with the finest ingredients to leave a lasting impression. Experience the true essence of luxury in every bottle.
           </p>

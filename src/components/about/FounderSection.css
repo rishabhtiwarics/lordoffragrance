@@ -198,6 +198,17 @@
   max-width: 25vw;
 }
 
+.founder-section-wrapper .pen .eyebrow {
+  display: block;
+  font-size: clamp(10px, .85vw, 11px);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  white-space: nowrap;
+  margin-bottom: 0.8vw;
+}
+
 .founder-section-wrapper .founder-desc {
   font-size: min(1.1vw, 14px);
   line-height: 1.6;

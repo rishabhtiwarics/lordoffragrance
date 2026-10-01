@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meet the Founder &amp; CEO</title>
+    <title>Why Choose Us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,7 +13,7 @@
     <style>
         /* Theme tokens taken from style.css */
         :root {
-            --white: #ffffff;
+            --bg: #f9f9f9;
             --ink: #111111;
             --muted: #666666;
             --line: #d8d8d8;
@@ -30,7 +30,7 @@
         body {
             width: 100%;
             overflow-x: clip;
-            background: var(--white);
+            background: var(--bg);
             font-family: var(--font);
             color: var(--ink)
         }
@@ -42,19 +42,21 @@
             color: transparent
         }
 
+        /* Measured from the Figma (359px wide frame): 1px = .2786vw
+     text 22vw | gap 7.8 | image A 15.3 | gap 1.4 | image B 15.6 | gap 5 | list 24.8 */
         .meet {
             width: 100%;
-            background: var(--white);
+            background: var(--bg);
             display: grid;
-            grid-template-columns: 13.5fr 18.7fr 15.5fr 1.5fr 19.5fr 2fr 22.5fr;
-            padding: 4vw 2.6vw 2.2vw 4.2vw;
+            align-items: start;
+            grid-template-columns: 21.6fr 7.8fr 15.3fr 1.4fr 15.6fr 5fr 24.8fr;
+            padding: 2.1vw 3.5vw 3vw 5vw;
         }
 
         /* left copy */
         .copy {
             grid-column: 1;
-            grid-row: 1;
-            align-self: start
+            grid-row: 1
         }
 
         .eyebrow {
@@ -68,77 +70,97 @@
         }
 
         .name {
-            margin-top: 1.1vw;
-            font-size: clamp(28px, 3.6vw, 54px);
+            margin-top: .9vw;
+            font-size: clamp(20px, 2.2vw, 54px);
             font-weight: 500;
             line-height: 1.05;
             color: var(--ink)
         }
 
         .text {
-            margin-top: 1.4vw;
-            font-size: clamp(11px, .9vw, 12px);
-            line-height: 1.6;
+            margin-top: 1.3vw;
+            font-size: clamp(11px, .85vw, 12px);
+            line-height: 1.55;
             color: var(--muted)
         }
 
         .rule {
-            margin-top: 1.8vw;
+            margin-top: 2.2vw;
             border: 0;
-            border-top: 1px solid var(--line)
+            border-top: 1px solid var(--ink)
         }
 
-        /* images */
+        /* images: width only, height comes from the image ratio (A 55x82, B 56x75) */
         .img-a {
             grid-column: 3;
             grid-row: 1;
-            align-self: end
+            margin-top: 7.9vw
         }
 
         .img-b {
             grid-column: 5;
             grid-row: 1;
-            align-self: start;
-            margin-top: 2.4vw
+            margin-top: 3.2vw
         }
 
         /* right list */
         .list {
             grid-column: 7;
             grid-row: 1;
-            align-self: end
+            margin-top: 13.5vw
         }
 
         .toggle {
             display: block;
-            text-align: right;
-            font-size: clamp(12px, 1.4vw, 14px);
-            line-height: 1;
-            color: var(--ink);
-            margin-bottom: 1.6vw
+            width: clamp(12px, 2vw, 16px);
+            margin: 0 0 1.7vw auto;
+            stroke: var(--ink);
+            fill: none;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round
         }
 
         .item {
             display: flex;
             align-items: flex-start;
             gap: .9vw;
-            padding: .9vw 0;
-            border-top: 1px solid var(--line);
-            font-size: clamp(11px, .85vw, 12px);
+            padding: 1.5vw 0;
+            border-bottom: 1px solid #eeeeee;
+            font-size: clamp(10px, .8vw, 12px);
             line-height: 1.5;
             color: var(--muted);
             cursor: pointer;
         }
 
+        .toggle+.item {
+            border-top: 1px solid var(--line)
+        }
+
         .item:last-child {
-            border-bottom: 1px solid var(--line)
+            border-bottom: 0
         }
 
         .item input {
-            width: clamp(11px, 1vw, 13px);
-            margin-top: .15vw;
+            appearance: none;
+            -webkit-appearance: none;
             flex: none;
-            accent-color: var(--ink)
+            width: clamp(11px, .9vw, 13px);
+            height: clamp(11px, .9vw, 13px);
+            margin-top: .2vw;
+            border: 1px solid var(--ink);
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .item input:checked {
+            background: var(--ink);
+            box-shadow: inset 0 0 0 2px var(--bg)
+        }
+
+        .item input:focus-visible {
+            outline: 2px solid var(--muted);
+            outline-offset: 2px
         }
 
         /* ================= RESPONSIVE ================= */
@@ -161,35 +183,37 @@
             }
 
             .text {
+                width: 100%;
                 font-size: 14px;
                 margin-top: 16px
             }
 
             .rule {
+                width: 100%;
                 margin-top: 24px
             }
 
             .img-a {
                 grid-column: 1;
                 grid-row: 2;
-                align-self: start
+                margin-top: 0
             }
 
             .img-b {
                 grid-column: 2;
                 grid-row: 2;
-                align-self: start;
                 margin-top: 0
             }
 
             .list {
                 grid-column: 1/-1;
-                grid-row: 3
+                grid-row: 3;
+                margin-top: 0
             }
 
             .toggle {
-                font-size: 18px;
-                margin-bottom: 12px
+                width: 20px;
+                margin: 0 0 12px auto
             }
 
             .item {
@@ -237,26 +261,25 @@
 
     <section class="meet">
         <div class="copy">
-            <span class="eyebrow">Meet the Founder &amp; CEO</span>
-            <h2 class="name">I'm Name</h2>
-            <p class="text">This paragraph text goes here. Lorem ipsum dolor sit amet consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</p>
+            <span class="eyebrow">Why Choose Us</span>
+            <h2 class="name">Our Professional Fragrance Craft</h2>
+            <p class="text">At Ministry Perfume, we blend rare botanicals, exotic resins, and fine oils to create luxury
+                scents that captivate every scene. Each bottle is designed with utmost precision, delivering rich
+                olfactory depth and signature elegance for any occasion.</p>
             <hr class="rule">
         </div>
 
-        <img class="img-a" src="https://placehold.co/440x690/f2f2f2/111111?text=Image+1" alt="Founder portrait one">
-        <img class="img-b" src="https://placehold.co/560x620/f2f2f2/111111?text=Image+2" alt="Founder portrait two">
+        <img class="img-a" src="https://placehold.co/440x656/f2f2f2/111111?text=Image+1" alt="Founder portrait one">
+        <img class="img-b" src="https://placehold.co/448x600/f2f2f2/111111?text=Image+2" alt="Founder portrait two">
 
         <div class="list">
-            <span class="toggle" aria-hidden="true">&minus;</span>
-            <label class="item"><input type="checkbox"><span>Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                    do eiusmod tempor.</span></label>
-            <label class="item"><input type="checkbox"><span>Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                    do eiusmod tempor.</span></label>
-            <label class="item"><input type="checkbox"><span>Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                    do eiusmod tempor.</span></label>
-            <label class="item"><input type="checkbox"><span>Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                    do eiusmod tempor.</span></label>
+            <svg class="toggle" viewBox="0 0 16 10" aria-hidden="true">
+                <path d="M2 2l6 6 6-6" />
+            </svg>
+            <label class="item"><input type="checkbox"><span>Artisanal Formulations</span></label>
+            <label class="item"><input type="checkbox"><span>Long-Lasting Projection</span></label>
+            <label class="item"><input type="checkbox"><span>Certified Perfumers</span></label>
+            <label class="item"><input type="checkbox"><span>Unbeatable Pricing</span></label>
         </div>
     </section>
 
