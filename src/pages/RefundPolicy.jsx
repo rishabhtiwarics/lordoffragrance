@@ -9,7 +9,7 @@ export default function RefundPolicy() {
         </div>
         <h1 className="shop-main-title">REFUND POLICY</h1>
       </div>
-      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#111' }}>
+      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#595555' }}>
         <h2>1. Returns</h2>
         <p>Our policy lasts 7 days. If 7 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.</p>
         

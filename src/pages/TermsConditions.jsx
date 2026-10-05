@@ -9,7 +9,7 @@ export default function TermsConditions() {
         </div>
         <h1 className="shop-main-title">TERMS & CONDITIONS</h1>
       </div>
-      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#111' }}>
+      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#595555' }}>
         <h2>1. General Terms</h2>
         <p>By accessing and placing an order with Lord of Fragrance, you confirm that you are in agreement with and bound by the terms of service contained in the Terms & Conditions outlined below.</p>
         

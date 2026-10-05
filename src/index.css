@@ -1192,21 +1192,6 @@ a {
   pointer-events: auto;
 }
 
-.cart-sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px;
-  border-bottom: 1px solid #eee;
-}
-
-.cart-sidebar-header h2 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
 .cart-close-btn {
   background: none;
   border: none;
@@ -1624,9 +1609,8 @@ a {
    ============================================================ */
 
 .contact-page {
-  padding: 140px 5% 80px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 60px 5% 40px;
+  background-color: #fafafa;
 }
 
 .contact-container {
@@ -1634,6 +1618,8 @@ a {
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact-title {
@@ -1865,10 +1851,10 @@ a {
 .shop-page-wrapper {
   background-color: #fff;
   color: #111;
-  min-height: 100vh;
 }
 
 .shop-top-header {
+  background-color: #ffffff;
   padding: 24px 5%;
   text-align: left;
   border-bottom: 1px solid #eaeaea;

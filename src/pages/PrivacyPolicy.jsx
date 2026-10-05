@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         </div>
         <h1 className="shop-main-title">PRIVACY POLICY</h1>
       </div>
-      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#111' }}>
+      <div style={{ padding: '0 5%', maxWidth: '900px', margin: '40px auto', lineHeight: '1.8', color: '#595555' }}>
         <h2>1. Introduction</h2>
         <p>Welcome to Lord of Fragrance. We value your privacy and are committed to protecting your personal data.</p>
         

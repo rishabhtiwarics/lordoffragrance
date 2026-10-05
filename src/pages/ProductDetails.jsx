@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { products } from '../data/products.js'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
+import { useCart } from '../context/CartContext.jsx'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
@@ -11,9 +12,18 @@ export default function ProductDetails() {
   const [qty, setQty] = useState(1)
   const [openFaq, setOpenFaq] = useState(null)
   const [loading, setLoading] = useState(false) // Set to false to show actual content
+  const { addToCart, cartItems } = useCart()
 
   // Find product by id, default to first product
   const product = products.find(p => p.id === Number(id)) || products[0] || {}
+  
+  const isAdded = cartItems.some(item => item.id === product.id)
+  
+  const handleAddToCart = () => {
+    if (!isAdded) {
+      addToCart(product, qty);
+    }
+  }
   
   // State for hero image, initialized to the first image in array or the fallback image
   const [mainImg, setMainImg] = useState(product.images?.[0] || product.image)
@@ -240,9 +250,9 @@ export default function ProductDetails() {
               <span>{qty}</span>
               <button onClick={() => handleQtyChange(1)}>+</button>
             </div>
-            <button className="pd-btn pd-btn-add">
+            <button className="pd-btn pd-btn-add" onClick={handleAddToCart} disabled={isAdded}>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-              Add to Cart
+              {isAdded ? "Added to Cart" : "Add to Cart"}
             </button>
             <button className="pd-btn pd-btn-buy">Buy Now</button>
           </div>

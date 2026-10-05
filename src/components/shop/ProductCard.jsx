@@ -1,9 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../context/CartContext.jsx'
 
 export default function ProductCard({ variant = 'shop', product = {} }) {
   const { image, name, title, subtitle, price, mrp } = product
   const [isLoaded, setIsLoaded] = useState(false)
+  const { addToCart, cartItems } = useCart()
+  
+  const isAdded = cartItems.some(item => item.id === product.id)
+  
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    if (!isAdded) {
+      addToCart(product);
+    }
+  }
   
   // Display skeleton until the image is fully loaded
   const showSkeleton = !isLoaded 
@@ -90,7 +101,9 @@ export default function ProductCard({ variant = 'shop', product = {} }) {
             <p className="product-price">
               {price} <span className="product-mrp">{mrp}</span>
             </p>
-            <button className="product-cta">Add To Cart</button>
+            <button className="product-cta" onClick={handleAddToCart} disabled={isAdded}>
+              {isAdded ? "ADDED TO CART" : "ADD TO CART"}
+            </button>
           </>
         )}
       </div>
@@ -126,9 +139,14 @@ export default function ProductCard({ variant = 'shop', product = {} }) {
               <p className="combo-price">{price}</p>
               <p className="combo-desc">{product.description}</p>
               <div className="combo-actions">
-                <Link to="/cart" style={{ flex: 1, textDecoration: 'none' }}>
-                  <button className="combo-btn combo-btn-primary">ADD TO CART</button>
-                </Link>
+                <button 
+                  className="combo-btn combo-btn-primary" 
+                  style={{ flex: 1 }} 
+                  onClick={handleAddToCart} 
+                  disabled={isAdded}
+                >
+                  {isAdded ? "ADDED TO CART" : "ADD TO CART"}
+                </button>
                 <Link to="/checkout" style={{ flex: 1, textDecoration: 'none' }}>
                   <button className="combo-btn combo-btn-secondary">BUY NOW</button>
                 </Link>
@@ -171,7 +189,9 @@ export default function ProductCard({ variant = 'shop', product = {} }) {
             <p className="product-card-subtitle">{subtitle || 'Extrait De Parfum'}</p>
             <p className="product-card-price">{price || '$120.00'}</p>
             {!isSearch && (
-              <button className="product-card-btn">ADD TO CART</button>
+              <button className="product-card-btn" onClick={handleAddToCart} disabled={isAdded}>
+                {isAdded ? "ADDED TO CART" : "ADD TO CART"}
+              </button>
             )}
           </>
         )}
