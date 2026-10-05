@@ -29,7 +29,7 @@ body {
 body {
   font-family: 'Archivo', Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: #111;
+  color: #333;
 }
 
 button {
@@ -54,7 +54,7 @@ a {
 .site-header {
   width: 100%;
   min-height: var(--header-h);
-  background: #000000;
+  background: #333333;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -99,7 +99,7 @@ a {
 
 .buy-now-btn {
   background: #ffffff;
-  color: #000000;
+  color: #333333;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -160,7 +160,7 @@ a {
 .announcement-bar {
   width: 100%;
   background: #ffffff;
-  color: #111;
+  color: #333;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -251,7 +251,7 @@ a {
   transition: transform 0.3s ease, visibility 0.3s ease;
   width: 100%;
   max-width: 380px;
-  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 0 24px rgba(51, 51, 51, 0.12);
   visibility: hidden;
   pointer-events: none;
 }
@@ -281,7 +281,7 @@ a {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  color: #111;
+  color: #333;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -304,7 +304,7 @@ a {
 .account-btn {
   flex: 1;
   background: #f2f2f2;
-  color: #111;
+  color: #333;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -321,7 +321,7 @@ a {
 .social-icons {
   display: flex;
   gap: 18px;
-  color: #111;
+  color: #333;
 }
 
 .mobile-menu-backdrop {
@@ -330,7 +330,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(51, 51, 51, 0.4);
   border: none;
   z-index: 44;
 }
@@ -348,7 +348,7 @@ a {
 .search-mega-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(51, 51, 51, 0.5);
   z-index: 998;
   backdrop-filter: blur(2px);
 }
@@ -361,7 +361,7 @@ a {
   background: #fff;
   z-index: 999;
   padding: 16px 5%;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 12px rgba(51, 51, 51, 0.1);
   animation: slideUp 0.3s ease-out forwards;
   overflow-y: auto;
 }
@@ -443,7 +443,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
-  background: #000000;
+  background: #333333;
   color: #ffffff;
   border-top: 1px solid #1d1d1d;
   border-bottom: 1px solid #1d1d1d;
@@ -544,7 +544,7 @@ a {
 
 .shop-collection {
   width: 100%;
-  background: #000000;
+  background: #333333;
   padding: 40px 0 56px;
 }
 
@@ -569,7 +569,7 @@ a {
 }
 
 .product-card {
-  background: #000000;
+  background: #333333;
   height: 100%;
 }
 
@@ -615,7 +615,7 @@ a {
   display: block;
   margin: 0 auto;
   background: #ffffff;
-  color: #111111;
+  color: #333333;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -630,7 +630,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
-  background: #000000;
+  background: #333333;
   gap: 0;
 }
 
@@ -668,12 +668,12 @@ a {
 
 .featured-duo-card::after {
   height: 42%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 100%);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.74) 100%);
 }
 
 .featured-duo-wide::after {
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.08) 48%, rgba(0, 0, 0, 0.38) 100%);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0.04) 0%, rgba(51, 51, 51, 0.08) 48%, rgba(51, 51, 51, 0.38) 100%);
 }
 
 .featured-duo-content {
@@ -859,7 +859,7 @@ a {
 }
 
 .impression-parallax-link:hover {
-  color: #111111;
+  color: #333333;
   background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.64) 100%);
   border-color: #ffffff;
 }
@@ -962,7 +962,7 @@ a {
 .footer-marquee-line {
   width: 1px;
   height: clamp(14px, 2.5vw, 28px);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.7) 50%, rgba(51, 51, 51, 0) 100%);
 }
 
 @keyframes footer-marquee-scroll {
@@ -998,7 +998,7 @@ a {
 
 .site-footer {
   width: 100%;
-  background: #000000;
+  background: #333333;
   color: #ffffff;
   padding: 56px 6vw 0;
 }
@@ -1157,7 +1157,7 @@ a {
   position: fixed;
   inset: 0;
   top: var(--menu-top, var(--header-h));
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(51, 51, 51, 0.4);
   z-index: 44;
   backdrop-filter: blur(2px);
 }
@@ -1175,7 +1175,7 @@ a {
   transition: transform 0.3s ease, visibility 0.3s ease;
   width: 100%;
   max-width: 380px;
-  box-shadow: -2px 0 24px rgba(0, 0, 0, 0.12);
+  box-shadow: -2px 0 24px rgba(51, 51, 51, 0.12);
   visibility: hidden;
   pointer-events: none;
 }
@@ -1348,7 +1348,7 @@ a {
 }
 
 .cart-item-remove:hover {
-  color: #000;
+  color: #333;
 }
 
 .cart-item-variant-text {
@@ -1632,7 +1632,7 @@ a {
 .contact-container {
   background: #fff;
   padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(51, 51, 51, 0.05);
   border-radius: 4px;
 }
 
@@ -1803,7 +1803,7 @@ a {
 
 .combo-btn-primary {
   background-color: #fff;
-  color: #000;
+  color: #333;
   border: 1px solid #fff;
 }
 
@@ -1820,7 +1820,7 @@ a {
 
 .combo-btn-secondary:hover {
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
 
 @media (min-width: 900px) {
@@ -1864,7 +1864,7 @@ a {
 
 .shop-page-wrapper {
   background-color: #fff;
-  color: #000;
+  color: #333;
   min-height: 100vh;
 }
 
@@ -1883,7 +1883,7 @@ a {
 }
 
 .shop-breadcrumbs a {
-  color: #000;
+  color: #333;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -1941,7 +1941,7 @@ a {
 }
 
 .shop-search-input:focus {
-  border-color: #000;
+  border-color: #333;
 }
 
 .no-products-msg {
@@ -1974,9 +1974,9 @@ a {
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background: #000;
+  background: #333;
   color: #fff;
-  border-color: #000;
+  border-color: #333;
 }
 
 .pagination-btn:disabled {
@@ -2004,13 +2004,13 @@ a {
 }
 
 .pagination-number:hover {
-  border-color: #000;
+  border-color: #333;
 }
 
 .pagination-number.active {
-  background: #000;
+  background: #333;
   color: #fff;
-  border-color: #000;
+  border-color: #333;
 }
 
 .shop-filter-section label {
@@ -2024,12 +2024,12 @@ a {
 }
 
 .shop-filter-section label:hover {
-  color: #000;
+  color: #333;
 }
 
 .shop-filter-section input {
   margin-right: 10px;
-  accent-color: #000;
+  accent-color: #333;
 }
 
 .shop-products-area {
@@ -2038,7 +2038,7 @@ a {
 
 /* Shop Features Section */
 .shop-features-section {
-  background-color: #000;
+  background-color: #333;
   color: #fff;
   padding: 40px 0;
   margin-top: 40px;
@@ -2118,10 +2118,10 @@ a {
 }
 .shop-products-grid .product-name,
 .shop-products-grid .product-price {
-  color: #000;
+  color: #333;
 }
 .shop-products-grid .product-cta {
-  background: #000;
+  background: #333;
   color: #fff;
 }
 .shop-products-grid .product-cta:hover {
@@ -2285,10 +2285,10 @@ a {
   transition: color 0.3s;
 }
 .pd-breadcrumb a:hover {
-  color: #000;
+  color: #333;
 }
 .pd-breadcrumb .active {
-  color: #000;
+  color: #333;
   font-weight: 600;
 }
 
@@ -2342,7 +2342,7 @@ a {
 }
 
 .pd-tag-loved {
-  color: #111;
+  color: #333;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -2414,7 +2414,7 @@ a {
 .price-current {
   font-size: 32px;
   font-weight: 700;
-  color: #111;
+  color: #333;
 }
 
 .price-old {
@@ -2472,13 +2472,13 @@ a {
 /* Override Swiper defaults for the offers section */
 .pd-offers-swiper .swiper-button-prev,
 .pd-offers-swiper .swiper-button-next {
-  color: #111;
+  color: #333;
   background: #fff;
   border: 1px solid #d1d5db;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(51, 51, 51,0.05);
 }
 .pd-offers-swiper .swiper-button-prev::after,
 .pd-offers-swiper .swiper-button-next::after {
@@ -2504,7 +2504,7 @@ a {
 }
 
 .pd-offer-badge {
-  background: #000;
+  background: #333;
   color: #fff;
   font-size: 9px;
   font-weight: 700;
@@ -2612,9 +2612,9 @@ a {
 }
 
 .pd-btn-add {
-  background: #000;
+  background: #333;
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #333;
 }
 .pd-btn-add:hover {
   background: #333;
@@ -2627,8 +2627,8 @@ a {
 
 .pd-btn-buy {
   background: #fff;
-  color: #000;
-  border: 1px solid #000;
+  color: #333;
+  border: 1px solid #333;
 }
 .pd-btn-buy:hover {
   background: #f9fafb;
@@ -2657,13 +2657,13 @@ a {
 .pd-trust-item svg {
   width: 20px;
   height: 20px;
-  color: #111;
+  color: #333;
 }
 
 .pd-promo-banner {
   background: #f9fafb;
   border: 1px solid #d1d5db;
-  color: #111;
+  color: #333;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
@@ -2692,11 +2692,11 @@ a {
 .pd-faq-list {
   max-width: 800px;
   margin: 0 auto;
-  border-top: 1px solid #111;
+  border-top: 1px solid #333;
 }
 
 .pd-faq-item {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #333;
 }
 
 .pd-faq-header {
@@ -2707,7 +2707,7 @@ a {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
-  color: #111;
+  color: #333;
   transition: opacity 0.3s;
 }
 
@@ -2718,14 +2718,14 @@ a {
 .pd-faq-icon {
   font-size: 20px;
   font-weight: 400;
-  color: #111;
+  color: #333;
 }
 
 .pd-faq-body {
   padding-bottom: 24px;
   font-size: 15px;
   line-height: 1.6;
-  color: #111;
+  color: #333;
 }
 
 .pd-signature-banner {
@@ -2768,7 +2768,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
-  color: #111;
+  color: #333;
 }
 
 .pd-notes-grid {
@@ -2805,7 +2805,7 @@ a {
 .pd-note-name {
   font-size: 13px;
   font-weight: 500;
-  color: #111;
+  color: #333;
 }
 
 /* ============================================================
