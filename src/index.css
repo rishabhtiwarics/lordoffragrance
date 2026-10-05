@@ -615,7 +615,7 @@ a {
   display: block;
   margin: 0 auto;
   background: #ffffff;
-  color: #111111;
+  color: #595555;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -859,7 +859,7 @@ a {
 }
 
 .impression-parallax-link:hover {
-  color: #111111;
+  color: #ffffff;
   background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.64) 100%);
   border-color: #ffffff;
 }
@@ -1348,7 +1348,7 @@ a {
 }
 
 .cart-item-remove:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 .cart-item-variant-text {
@@ -1803,7 +1803,7 @@ a {
 
 .combo-btn-primary {
   background-color: #fff;
-  color: #000;
+  color: #595555;
   border: 1px solid #fff;
 }
 
@@ -1820,7 +1820,7 @@ a {
 
 .combo-btn-secondary:hover {
   background-color: #fff;
-  color: #000;
+  color: #ffffff;
 }
 
 @media (min-width: 900px) {
@@ -1864,7 +1864,7 @@ a {
 
 .shop-page-wrapper {
   background-color: #fff;
-  color: #000;
+  color: #111;
   min-height: 100vh;
 }
 
@@ -1883,7 +1883,7 @@ a {
 }
 
 .shop-breadcrumbs a {
-  color: #000;
+  color: #111;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -1941,7 +1941,7 @@ a {
 }
 
 .shop-search-input:focus {
-  border-color: #000;
+  border-color: #ffffff;
 }
 
 .no-products-msg {
@@ -1974,9 +1974,9 @@ a {
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background: #000;
+  background: #595555;
   color: #fff;
-  border-color: #000;
+  border-color: #595555;
 }
 
 .pagination-btn:disabled {
@@ -2004,13 +2004,13 @@ a {
 }
 
 .pagination-number:hover {
-  border-color: #000;
+  border-color: #ffffff;
 }
 
 .pagination-number.active {
-  background: #000;
+  background: #595555;
   color: #fff;
-  border-color: #000;
+  border-color: #595555;
 }
 
 .shop-filter-section label {
@@ -2024,12 +2024,12 @@ a {
 }
 
 .shop-filter-section label:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 .shop-filter-section input {
   margin-right: 10px;
-  accent-color: #000;
+  accent-color: #ffffff;
 }
 
 .shop-products-area {
@@ -2038,8 +2038,8 @@ a {
 
 /* Shop Features Section */
 .shop-features-section {
-  background-color: #000;
-  color: #fff;
+  background-color: #595555;
+  color: #ffffff;
   padding: 40px 0;
   margin-top: 40px;
 }
@@ -2067,14 +2067,14 @@ a {
   top: 10%;
   bottom: 10%;
   width: 1px;
-  background-color: #333; /* Theme dark border */
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .shop-feature-icon {
   width: 32px;
   height: 32px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .shop-feature-icon svg {
@@ -2092,7 +2092,7 @@ a {
 
 .shop-feature-item p {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #f2f2f2;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2118,10 +2118,10 @@ a {
 }
 .shop-products-grid .product-name,
 .shop-products-grid .product-price {
-  color: #000;
+  color: #111;
 }
 .shop-products-grid .product-cta {
-  background: #000;
+  background: #595555;
   color: #fff;
 }
 .shop-products-grid .product-cta:hover {
@@ -2171,7 +2171,7 @@ a {
     top: 10%;
     bottom: 10%;
     width: 1px;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.3);
   }
   
   .shop-feature-item p {
@@ -2285,10 +2285,10 @@ a {
   transition: color 0.3s;
 }
 .pd-breadcrumb a:hover {
-  color: #000;
+  color: #595555;
 }
 .pd-breadcrumb .active {
-  color: #000;
+  color: #595555;
   font-weight: 600;
 }
 
@@ -2339,10 +2339,11 @@ a {
   min-width: 0;
   position: sticky;
   top: 100px;
+  color: #595555;
 }
 
 .pd-tag-loved {
-  color: #111;
+  color: #595555;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -2355,6 +2356,7 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 0 16px;
+  color: #595555;
 }
 
 .pd-tags-row {
@@ -2414,7 +2416,7 @@ a {
 .price-current {
   font-size: 32px;
   font-weight: 700;
-  color: #111;
+  color: #595555;
 }
 
 .price-old {
@@ -2472,7 +2474,7 @@ a {
 /* Override Swiper defaults for the offers section */
 .pd-offers-swiper .swiper-button-prev,
 .pd-offers-swiper .swiper-button-next {
-  color: #111;
+  color: #ffffff;
   background: #fff;
   border: 1px solid #d1d5db;
   width: 32px;
@@ -2504,7 +2506,7 @@ a {
 }
 
 .pd-offer-badge {
-  background: #000;
+  background: #595555;
   color: #fff;
   font-size: 9px;
   font-weight: 700;
@@ -2612,12 +2614,12 @@ a {
 }
 
 .pd-btn-add {
-  background: #000;
+  background: #595555;
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #595555;
 }
 .pd-btn-add:hover {
-  background: #333;
+  background: #474343;
 }
 .pd-btn-add svg {
   width: 20px;
@@ -2627,8 +2629,8 @@ a {
 
 .pd-btn-buy {
   background: #fff;
-  color: #000;
-  border: 1px solid #000;
+  color: #595555;
+  border: 1px solid #595555;
 }
 .pd-btn-buy:hover {
   background: #f9fafb;
@@ -2657,13 +2659,13 @@ a {
 .pd-trust-item svg {
   width: 20px;
   height: 20px;
-  color: #111;
+  color: #595555;
 }
 
 .pd-promo-banner {
   background: #f9fafb;
   border: 1px solid #d1d5db;
-  color: #111;
+  color: #595555;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
@@ -2675,7 +2677,8 @@ a {
    ============================================================ */
 
 .pd-faq-section {
-  background-color: #f9f9f9;
+  background-color: #595555;
+  color: #ffffff;
   padding: 40px 5%;
   margin-top: 40px;
 }
@@ -2686,17 +2689,18 @@ a {
   margin-bottom: 40px;
   font-weight: 500;
   letter-spacing: 0.05em;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .pd-faq-list {
   max-width: 800px;
   margin: 0 auto;
-  border-top: 1px solid #111;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pd-faq-item {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pd-faq-header {
@@ -2707,7 +2711,7 @@ a {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
-  color: #111;
+  color: #ffffff;
   transition: opacity 0.3s;
 }
 
@@ -2718,14 +2722,14 @@ a {
 .pd-faq-icon {
   font-size: 20px;
   font-weight: 400;
-  color: #111;
+  color: #ffffff;
 }
 
 .pd-faq-body {
   padding-bottom: 24px;
   font-size: 15px;
   line-height: 1.6;
-  color: #111;
+  color: #ffffff;
 }
 
 .pd-signature-banner {
@@ -2739,6 +2743,7 @@ a {
   margin-bottom: 40px;
   font-weight: 500;
   letter-spacing: 0.02em;
+  color: #595555;
 }
 
 .pd-signature-buttons {
@@ -2768,7 +2773,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
-  color: #111;
+  color: #595555;
 }
 
 .pd-notes-grid {
@@ -2805,7 +2810,7 @@ a {
 .pd-note-name {
   font-size: 13px;
   font-weight: 500;
-  color: #111;
+  color: #ffffff;
 }
 
 /* ============================================================
